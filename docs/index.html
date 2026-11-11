@@ -265,41 +265,6 @@ section { padding-block: clamp(40px, 6vw, 80px); }
 
 footer { padding-block: 28px 40px; color: var(--muted); font-size: 0.9rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); }
 
-#btn-subir {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 48px;
-  height: 48px;
-  border: none;
-  border-radius: 50%;
-  background: #38bdf8;
-  color: #062235;
-  font-size: 1.4rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 10px 24px -10px rgba(14, 165, 233, 0.9);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
-  z-index: 50;
-}
-
-#btn-subir.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-#btn-subir:hover {
-  background: #0ea5e9;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 @media (max-width: 860px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
   .project, .project:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
@@ -350,7 +315,7 @@ html {
           </div>
           <div class="stage-card">
             <span>Último proyecto</span>
-            <strong style="font-size:1.35rem">Previalo</strong>
+            <strong style="font-size:1.35rem">Barbería Marco Valdés</strong>
           </div>
         </div>
       </div>
@@ -440,9 +405,9 @@ html {
                 <span class="url">xavooo2112.github.io/PaginaWebPeluqueria</span>
               </div>
               <div class="screen screen-barber">
-                <div class="nav-mini"><span>Barbería Miguel Angel</span><span>666 20 47 88</span></div>
-                <span class="rating">4,8 · 53 reseñas en Google</span>
-                <div class="headline">Tu barbería de confianza en el Grao de Castelló</div>
+                <div class="nav-mini"><span>Barbería Marco Valdés</span><span>Puerto Claro</span></div>
+                <span class="rating">4,7 · 41 reseñas en Google</span>
+                <div class="headline">Tu barbería de confianza en Puerto Claro</div>
                 <div style="display:flex;gap:8px;flex-wrap:wrap">
                   <span class="mini-btn">Reservar cita</span>
                   <span class="mini-btn alt">WhatsApp</span>
@@ -451,12 +416,12 @@ html {
             </div>
           </div>
           <div class="project-info">
-            <span class="eyebrow">Web para negocio local</span>
-            <h3>Barbería Miguel Angel</h3>
-            <p>Web de cuatro páginas (inicio, servicios, reseñas y contacto) para una barbería del Grao de Castelló. Botones de llamada y WhatsApp, dirección visible y textos optimizados para que el negocio aparezca en las búsquedas locales.</p>
+            <span class="eyebrow">Web de ejemplo para negocio local</span>
+            <h3>Barbería Marco Valdés</h3>
+            <p>Web de cuatro páginas (inicio, servicios, reseñas y contacto) para una barbería de ejemplo en Puerto Claro. Incluye catálogo de servicios con botón de consulta por WhatsApp, formulario para pedir cita y enlace a Instagram.</p>
             <div class="tags">
               <span class="tag">Multipágina</span>
-              <span class="tag">SEO local</span>
+              <span class="tag">WhatsApp</span>
               <span class="tag">GitHub Pages</span>
             </div>
             <a class="btn btn-primary" href="https://xavooo2112.github.io/PaginaWebPeluqueria/" target="_blank" rel="noopener">Visitar la web</a>
@@ -537,21 +502,5 @@ html {
     <span>Portafolio 2026</span>
   </footer>
 </div>
-<button id="btn-subir" type="button" aria-label="Volver arriba">↑</button>
-<script>
-  const botonSubir = document.getElementById("btn-subir");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      botonSubir.classList.add("visible");
-    } else {
-      botonSubir.classList.remove("visible");
-    }
-  });
-
-  botonSubir.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-</body>
-</html>
+</body></html>
