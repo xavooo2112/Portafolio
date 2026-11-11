@@ -1,0 +1,557 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Xavier Gabarri Miguel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f2f9fe;
+  --surface: #ffffff;
+  --surface-2: #e4f3fc;
+  --ink: #0b2a43;
+  --muted: #476985;
+  --line: #cfe6f5;
+  --sky: #38bdf8;
+  --sky-deep: #0369a1;
+  --sky-soft: #bae6fd;
+  --on-sky: #062235;
+  --shadow: 0 18px 50px -24px rgba(3, 105, 161, 0.45);
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #07182a;
+    --surface: #0d2740;
+    --surface-2: #12324f;
+    --ink: #e8f5fd;
+    --muted: #94b6cf;
+    --line: #1c4263;
+    --sky: #38bdf8;
+    --sky-deep: #7dd3fc;
+    --sky-soft: #0c4a6e;
+    --on-sky: #062235;
+    --shadow: 0 18px 50px -24px rgba(0, 0, 0, 0.8);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #07182a;
+  --surface: #0d2740;
+  --surface-2: #12324f;
+  --ink: #e8f5fd;
+  --muted: #94b6cf;
+  --line: #1c4263;
+  --sky: #38bdf8;
+  --sky-deep: #7dd3fc;
+  --sky-soft: #0c4a6e;
+  --on-sky: #062235;
+  --shadow: 0 18px 50px -24px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  padding-block: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+p { margin: 0; }
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sky-deep);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 22px;
+  flex-wrap: wrap;
+}
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: linear-gradient(140deg, var(--sky), #0ea5e9 60%, #0284c7);
+  display: grid; place-items: center;
+  color: var(--on-sky); font-size: 0.95rem; font-weight: 800;
+}
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a {
+  text-decoration: none; font-weight: 600; font-size: 0.93rem;
+  padding: 8px 14px; border-radius: 999px; color: var(--muted);
+  transition: background 0.2s, color 0.2s;
+}
+.nav a:hover { background: var(--surface-2); color: var(--ink); }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  padding-block: clamp(28px, 6vw, 72px) clamp(40px, 7vw, 88px);
+}
+.hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; margin-top: 18px; }
+.hero h1 span { color: var(--sky-deep); }
+.hero p.lead { margin-top: 22px; font-size: 1.15rem; color: var(--muted); max-width: 54ch; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px; border-radius: 12px; font-weight: 700; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn-primary { background: var(--sky); color: var(--on-sky); box-shadow: 0 10px 28px -12px rgba(14, 165, 233, 0.9); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(14, 165, 233, 1); }
+.btn-ghost { border: 1.5px solid var(--line); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--sky); transform: translateY(-2px); }
+
+.stage {
+  position: relative;
+  border-radius: 28px;
+  padding: clamp(18px, 3vw, 30px);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,0.55), transparent 55%),
+    linear-gradient(155deg, #7dd3fc 0%, #38bdf8 45%, #0ea5e9 100%);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.stage::after {
+  content: "";
+  position: absolute; right: -60px; bottom: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+}
+.stage-stack { position: relative; z-index: 1; display: grid; gap: 14px; }
+.stage .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.stage .chip {
+  background: rgba(255,255,255,0.85); color: #062235;
+  font-weight: 700; font-size: 0.85rem; padding: 7px 13px; border-radius: 999px;
+}
+.stage-card {
+  background: rgba(255,255,255,0.92); color: #0b2a43;
+  border-radius: 18px; padding: 18px 20px;
+  display: grid; gap: 4px;
+}
+.stage-card strong { font-family: var(--font-display); font-size: 2.1rem; line-height: 1; }
+.stage-card span { font-size: 0.92rem; color: #356483; }
+.stage-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+section { padding-block: clamp(40px, 6vw, 80px); }
+.sec-head { display: grid; gap: 12px; margin-bottom: clamp(28px, 4vw, 48px); max-width: 60ch; }
+.sec-head h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); font-weight: 800; }
+.sec-head p { color: var(--muted); }
+
+.projects { display: grid; gap: clamp(28px, 4vw, 48px); }
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: clamp(16px, 2.6vw, 28px);
+  box-shadow: var(--shadow);
+}
+.project:nth-child(even) { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+.project:nth-child(even) .shot { order: 2; }
+.project-info { display: grid; gap: 14px; min-width: 0; }
+.project-info .eyebrow { display: block; }
+.project-info h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 800; }
+.project-info p { color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 999px;
+  background: var(--surface-2); color: var(--sky-deep);
+}
+.project-info .btn { justify-self: start; margin-top: 6px; }
+
+.shot { min-width: 0; }
+.browser {
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: transform 0.35s ease;
+}
+.project:hover .browser { transform: translateY(-4px); }
+.browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.url {
+  margin-left: 8px; flex: 1; min-width: 0;
+  font-size: 0.74rem; color: var(--muted);
+  background: var(--surface); border-radius: 999px; padding: 3px 12px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.screen { padding: 22px; min-height: 250px; display: grid; align-content: center; gap: 14px; }
+
+.screen-previalo {
+  background: linear-gradient(160deg, #0c4a6e, #075985 55%, #0369a1);
+  color: #f0f9ff; text-align: center; justify-items: center;
+}
+.screen-previalo .wordmark { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.9rem, 5vw, 2.6rem); letter-spacing: 0.04em; }
+.screen-previalo .sub { font-size: 0.82rem; opacity: 0.85; }
+.dice { width: 54px; height: 54px; }
+.pill { padding: 9px 18px; border-radius: 999px; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.04em; }
+.pill-on { background: #7dd3fc; color: #062235; }
+.pill-off { border: 1.5px solid rgba(240,249,255,0.6); }
+.pill-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+.screen-oxid {
+  background: linear-gradient(150deg, #e0f2fe, #bae6fd);
+  color: #0b2a43; justify-items: start;
+}
+.screen-oxid .wordmark { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.1rem, 5.6vw, 3rem); letter-spacing: -0.03em; }
+.screen-oxid .bars { display: grid; gap: 8px; width: 100%; }
+.screen-oxid .bar { height: 10px; border-radius: 999px; background: rgba(3,105,161,0.28); }
+.screen-oxid .bar:nth-child(1) { width: 86%; }
+.screen-oxid .bar:nth-child(2) { width: 64%; }
+.screen-oxid .bar:nth-child(3) { width: 74%; background: #0284c7; }
+
+.screen-barber { background: #ffffff; color: #0b2a43; justify-items: start; align-content: start; gap: 12px; }
+.screen-barber .nav-mini { display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 0.74rem; font-weight: 700; gap: 8px; }
+.screen-barber .nav-mini span:last-child { color: #0369a1; }
+.screen-barber .rating { font-size: 0.74rem; font-weight: 700; color: #0369a1; background: #e0f2fe; padding: 4px 10px; border-radius: 999px; }
+.screen-barber .headline { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.25rem, 3.6vw, 1.6rem); line-height: 1.1; }
+.screen-barber .mini-btn { font-size: 0.74rem; font-weight: 800; padding: 8px 14px; border-radius: 8px; background: #0ea5e9; color: #06283d; }
+.screen-barber .mini-btn.alt { background: #e0f2fe; color: #0369a1; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.skill {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 20px; padding: 22px; display: grid; gap: 10px; min-width: 0;
+}
+.skill-ico {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--surface-2); color: var(--sky-deep);
+  display: grid; place-items: center;
+}
+.skill h3 { font-size: 1.2rem; font-weight: 700; }
+.skill p { color: var(--muted); font-size: 0.96rem; }
+
+.process { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; counter-reset: step; }
+.step {
+  position: relative; border-radius: 20px; padding: 24px;
+  background: var(--surface-2); display: grid; gap: 8px; min-width: 0;
+}
+.step::before {
+  counter-increment: step; content: counter(step);
+  font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1; color: var(--sky-deep);
+}
+.step h3 { font-size: 1.2rem; font-weight: 700; }
+.step p { color: var(--muted); font-size: 0.96rem; }
+
+.closing {
+  border-radius: 28px; padding: clamp(28px, 5vw, 56px);
+  background: linear-gradient(150deg, #0ea5e9, #0369a1);
+  color: #f0f9ff; display: grid; gap: 14px; box-shadow: var(--shadow);
+}
+.closing h2 { font-size: clamp(1.8rem, 4.4vw, 2.8rem); font-weight: 800; }
+.closing p { max-width: 56ch; opacity: 0.92; }
+.closing .eyebrow { color: #bae6fd; }
+
+footer { padding-block: 28px 40px; color: var(--muted); font-size: 0.9rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); }
+
+#btn-subir {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #38bdf8;
+  color: #062235;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -10px rgba(14, 165, 233, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  z-index: 50;
+}
+
+#btn-subir.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#btn-subir:hover {
+  background: #0ea5e9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .project, .project:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+  .project:nth-child(even) .shot { order: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .browser, .btn, .nav a { transition: none; }
+  .project:hover .browser, .btn:hover { transform: none; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#inicio" aria-label="Xavier Gabarri Miguel, inicio">
+      <span class="brand-mark">XG</span>
+      <span>Xavier Gabarri</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Desarrollador web</span>
+        <h1>Xavier Gabarri <span>Miguel</span></h1>
+        <p class="lead">Creo páginas web claras, rápidas y pensadas para que se vean bien en el móvil. Desde negocios locales hasta juegos y proyectos propios.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#servicios">Qué puedo hacer</a>
+        </div>
+      </div>
+      <div class="stage" aria-label="Resumen del portafolio">
+        <div class="stage-stack">
+          <div class="chip-row">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Responsive</span>
+          </div>
+          <div class="stage-split">
+            <div class="stage-card"><strong>3</strong><span>webs publicadas</span></div>
+            <div class="stage-card"><strong>100%</strong><span>adaptadas a móvil</span></div>
+          </div>
+          <div class="stage-card">
+            <span>Último proyecto</span>
+            <strong style="font-size:1.35rem">Previalo</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="proyectos">
+      <div class="sec-head">
+        <span class="eyebrow">Proyectos</span>
+        <h2>Webs reales, publicadas y funcionando</h2>
+        <p>Una selección de trabajos que puedes abrir y probar ahora mismo.</p>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="shot">
+            <div class="browser">
+              <div class="browser-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="url">previalo.netlify.app</span>
+              </div>
+              <div class="screen screen-previalo">
+                <svg class="dice" viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="6" y="6" width="52" height="52" rx="12" fill="#f0f9ff"/>
+                  <circle cx="20" cy="20" r="5" fill="#0369a1"/>
+                  <circle cx="44" cy="20" r="5" fill="#0369a1"/>
+                  <circle cx="32" cy="32" r="5" fill="#0369a1"/>
+                  <circle cx="20" cy="44" r="5" fill="#0369a1"/>
+                  <circle cx="44" cy="44" r="5" fill="#0369a1"/>
+                </svg>
+                <div class="wordmark">PREVIALO</div>
+                <div class="sub">El mejor juego para jugar en tus previas</div>
+                <div class="pill-row">
+                  <span class="pill pill-off">AÑADIR JUGADOR</span>
+                  <span class="pill pill-on">¡EMPEZAR JUEGO!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="eyebrow">Aplicación web interactiva</span>
+            <h3>Previalo</h3>
+            <p>Juego de tablero para animar las previas. Se añaden los jugadores, se tira el dado y cada casilla trae un reto. Incluye dos modos (tranqui y picante), duelos de piedra, papel o tijera y un ranking final de tragos y retos cumplidos.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Lógica de juego</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <a class="btn btn-primary" href="https://previalo.netlify.app/" target="_blank" rel="noopener">Visitar Previalo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="shot">
+            <div class="browser">
+              <div class="browser-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="url">oxidclub.netlify.app</span>
+              </div>
+              <div class="screen screen-oxid">
+                <div class="wordmark">Oxid Club</div>
+                <div class="bars" aria-hidden="true">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="eyebrow">Proyecto web</span>
+            <h3>Oxid Club</h3>
+            <p>Sitio web del proyecto Oxid Club, diseñado y publicado en Netlify. Ábrelo para ver el resultado completo.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Netlify</span>
+            </div>
+            <a class="btn btn-primary" href="https://oxidclub.netlify.app/" target="_blank" rel="noopener">Visitar Oxid Club</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="shot">
+            <div class="browser">
+              <div class="browser-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="url">xavooo2112.github.io/PaginaWebPeluqueria</span>
+              </div>
+              <div class="screen screen-barber">
+                <div class="nav-mini"><span>Barbería Miguel Angel</span><span>666 20 47 88</span></div>
+                <span class="rating">4,8 · 53 reseñas en Google</span>
+                <div class="headline">Tu barbería de confianza en el Grao de Castelló</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <span class="mini-btn">Reservar cita</span>
+                  <span class="mini-btn alt">WhatsApp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="eyebrow">Web para negocio local</span>
+            <h3>Barbería Miguel Angel</h3>
+            <p>Web de cuatro páginas (inicio, servicios, reseñas y contacto) para una barbería del Grao de Castelló. Botones de llamada y WhatsApp, dirección visible y textos optimizados para que el negocio aparezca en las búsquedas locales.</p>
+            <div class="tags">
+              <span class="tag">Multipágina</span>
+              <span class="tag">SEO local</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+            <a class="btn btn-primary" href="https://xavooo2112.github.io/PaginaWebPeluqueria/" target="_blank" rel="noopener">Visitar la web</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="sec-head">
+        <span class="eyebrow">Servicios</span>
+        <h2>Lo que puedo hacer por tu proyecto</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="skill-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>
+          </div>
+          <h3>Webs para negocios</h3>
+          <p>Páginas sencillas y profesionales para peluquerías, comercios y servicios locales, con contacto directo y dirección bien visible.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Apps y juegos web</h3>
+          <p>Proyectos interactivos con JavaScript que funcionan en cualquier navegador, sin instalar nada.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          </div>
+          <h3>Diseño adaptable</h3>
+          <p>Cada página se ve y se usa bien en móvil, tableta y ordenador.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+          </div>
+          <h3>Publicación online</h3>
+          <p>Dejo la web publicada en Netlify o GitHub Pages, lista para compartir con un enlace.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="sec-head">
+        <span class="eyebrow">Proceso</span>
+        <h2>Así trabajamos juntos</h2>
+      </div>
+      <div class="process">
+        <div class="step">
+          <h3>Hablamos de tu idea</h3>
+          <p>Me cuentas qué necesitas, qué contenido tienes y qué quieres que haga la web.</p>
+        </div>
+        <div class="step">
+          <h3>Diseño y desarrollo</h3>
+          <p>Construyo la web y te enseño el avance para ajustar lo que haga falta.</p>
+        </div>
+        <div class="step">
+          <h3>Publicación</h3>
+          <p>Pongo la web online con su enlace y compruebo que funciona en móvil y ordenador.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="closing">
+        <span class="eyebrow">Nuevos proyectos</span>
+        <h2>¿Tienes un negocio o una idea que necesita web?</h2>
+        <p>Estoy disponible para crear páginas web a medida. Mira los proyectos de arriba y dime cuál se parece más a lo que buscas.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Xavier Gabarri Miguel · Desarrollo web</span>
+    <span>Portafolio 2026</span>
+  </footer>
+</div>
+<button id="btn-subir" type="button" aria-label="Volver arriba">↑</button>
+<script>
+  const botonSubir = document.getElementById("btn-subir");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      botonSubir.classList.add("visible");
+    } else {
+      botonSubir.classList.remove("visible");
+    }
+  });
+
+  botonSubir.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>
